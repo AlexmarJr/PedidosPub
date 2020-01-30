@@ -12,8 +12,7 @@ class LoginController extends Controller
     public function store(Request $request)
     {
 
-        //Testing git
-        //Testing git
+        
         try{
         $adminStatus = $request->get('adminStatus');
         $cong = $request->get('congregacao');
