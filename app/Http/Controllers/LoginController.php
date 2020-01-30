@@ -13,6 +13,7 @@ class LoginController extends Controller
     {
 
         //Testing git
+        //Testing git
         try{
         $adminStatus = $request->get('adminStatus');
         $cong = $request->get('congregacao');
