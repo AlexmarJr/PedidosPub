@@ -12,7 +12,7 @@ class LoginController extends Controller
     public function store(Request $request)
     {
 
-        
+        //Testing github
         try{
         $adminStatus = $request->get('adminStatus');
         $cong = $request->get('congregacao');
