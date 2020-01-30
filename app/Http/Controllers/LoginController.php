@@ -75,7 +75,8 @@ class LoginController extends Controller
        
             $head = Publicacao::find($id)->update(['status' => 1]);;
             
-            return view('admin',$this->option());
+            return redirect()->route('search');
+        
             
     }
 
