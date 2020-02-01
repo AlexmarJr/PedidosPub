@@ -75,8 +75,13 @@ class LoginController extends Controller
        
             $head = Publicacao::find($id)->update(['status' => 1]);;
             
+<<<<<<< HEAD
             //return view('historicRequests',$this->option());
             return redirect()->route('search');
+=======
+            return redirect()->route('search');
+        
+>>>>>>> dd381246c254caf96f378daee2a8888a854ffd00
             
     }
 
