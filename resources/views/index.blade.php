@@ -1,5 +1,6 @@
 <HTML>
   <HEAD>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <TITLE>Pedidos Publicações</TITLE>
   </HEAD>
@@ -10,7 +11,7 @@
             <img src="img/book.png" style="width: 2%">
            
           
-            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <div class="row" >
               <ul class="navbar-nav mr-auto" style="padding-left: 50px">
               @if ($userName != 'admin')
               <li class="nav-item active">
@@ -30,7 +31,7 @@
                 @endif
               </ul>
             </div>
-            <a class="nav-link" href="{{route('logoff')}}" style="background-color:red;color:white;border-radius: 25%">Logoff<span class="sr-only"></span></a>
+            <a class="nav-link" href="{{route('logoff')}}" style="background-color:red;color:white;border-radius: 25%;margin-left:60%">Logoff<span class="sr-only"></span></a>
           </nav>
     </header>
   </div>

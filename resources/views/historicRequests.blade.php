@@ -1,5 +1,6 @@
 <HTML>
         <HEAD>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <TITLE>Historico (Administrador)</TITLE>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
@@ -11,7 +12,7 @@
                   <img src="img/book.png" style="width: 2%">
                  
                 
-                  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                 
                     <ul class="navbar-nav mr-auto" style="padding-left: 50px">
                         <li class="nav-item active">
                             <a class="nav-link" href="{{route('index')}}">Realizar Pedido&nbsp;&nbsp;&nbsp;|<span class="sr-only"></span></a>
@@ -24,7 +25,7 @@
                         </li>
                     </ul>
                     
-                  </div>
+                  
                   <a class="nav-link" href="{{route('logoff')}}" style="background-color:red;color:white;border-radius: 25%">Logoff<span class="sr-only"></span></a>
                 </nav>
           </header>
