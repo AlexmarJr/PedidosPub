@@ -29,41 +29,27 @@
                 </nav>
           </header>
         </div>
-        <form>
-                <!-- <div class="row" style="margin-left: 10px;">
+        <form action="{{route('filter')}}" method="post" autocomplete="off" enctype="multipart/form-data">
+        @csrf
+        
+                <div class="row" style="margin-left: 10px;">
                         <div class="col-sm-3">
-                          <select class="form-control" required id='orderMonth'> 
-                            <option value="" disabled selected hidden>Mês</option>
-                            <option value="1">Janeiro</option>
-                            <option value="2">Fevereiro</option>
-                            <option value="3">Março</option>
-                            <option value="4">Abril</option>
-                            <option value="5">Maio</option>
-                            <option value="6">Junho</option>
-                            <option value="7">Julho</option>
-                            <option value="8">Agosto</option>
-                            <option value="9">Setembro</option>
-                            <option value="10">Outubro</option>
-                            <option value="11">Novembro</option>
-                            <option value="12">Dezembro</option>
+                          <select class="form-control" id='orderMonth' name='congSelect'> 
+                            <option value="" disabled selected hidden>Congregação</option>
+                            <option value="Cajazeiras 9">Cajazeiras 9</option>
+                            <option value="Cajazeiras 8">Cajazeiras 8</option>
+                            <option value="Parque São José">Parque São Jose</option>
+                            <option value="Jaguaripe">Jaguaripe</option>
+                            <option value="Fazenda Grande 2">Fazenda Grande 2</option>
+                            <option value="Administrador">Administrador</option>
                           </select>
                         </div>
 
                         <div class="col-sm-3">
-                                <select class="form-control" required id='orderYear'>
-                                  <option value="" disabled selected hidden>Ano</option>
-                                  <option value='2019'>2019</option>
-                                  <option value='2020'>2020</option>
-                                  <option value='2021'>2021</option>
-                                  <option value='2022'>2022</option>
-                                  <option value='2023'>2023</option>
-                                  <option value='2024'>2024</option>
-                                </select>
-                              </div> 
-
-                        <button type="button" class="btn btn-primary">Filtrar</button>-->
+                          <button class="btn btn-primary" type="submit" >Filtrar</button>
+                        </div>
                         
-        </form>
+        </form >
               <div class="container float-left" style="background-color: white;margin-top: 20px;margin-left: 16px;border-radius: 2%">
                   <table class="table">
                       <tr>

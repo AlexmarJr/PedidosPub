@@ -73,15 +73,8 @@ class LoginController extends Controller
 
     public function changeStatus($id){
        
-            $head = Publicacao::find($id)->update(['status' => 1]);;
-            
-<<<<<<< HEAD
-            //return view('historicRequests',$this->option());
+            $head = Publicacao::find($id)->update(['status' => 1]);
             return redirect()->route('search');
-=======
-            return redirect()->route('search');
-        
->>>>>>> dd381246c254caf96f378daee2a8888a854ffd00
             
     }
 
@@ -92,7 +85,7 @@ class LoginController extends Controller
 
     public function searchEnviados(){
         $publ = DB::table('publicacao')->orderBy('created_at')->get();
-        return view('admin', compact('publ'));
+        return view('historicRequests', compact('publ'));
     }
 
     public function login(Request $request) {
@@ -134,4 +127,13 @@ public function logoff(){
     $x = false;
     return view('login',compact('x'));
 }
+
+public function filter(Request $request){
+    $cong = $request['congSelect'];
+    
+    $publ = DB::table('publicacao')->orderBy('created_at')->where('congregacao','=',$cong)->get();
+    return view('historicRequests', compact('publ'));
+}
+
+
 }
