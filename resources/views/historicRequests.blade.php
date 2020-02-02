@@ -31,7 +31,9 @@
         </div>
         <form action="{{route('filter')}}" method="post" autocomplete="off" enctype="multipart/form-data">
         @csrf
-        
+
+        <input type="hidden" value="" id="excelValor" name="excelValor">
+
                 <div class="row" style="margin-left: 10px;">
                         <div class="col-sm-3">
                           <select class="form-control" id='orderMonth' name='congSelect'> 
@@ -47,9 +49,12 @@
 
                         <div class="col-sm-3">
                           <button class="btn btn-primary" type="submit" >Filtrar</button>
+
+                          <a style="margin-left:50%" href="{{route('Excel')}}" class="btn btn-warning">Baixar Excel</a>
                         </div>
                         
         </form >
+        
               <div class="container float-left" style="background-color: white;margin-top: 20px;margin-left: 16px;border-radius: 2%">
                   <table class="table">
                       <tr>
@@ -104,6 +109,12 @@
                     )
                 }
             })
+        }
+
+
+        function excelValues(){
+
+
         }
         </script>
       </HTML>

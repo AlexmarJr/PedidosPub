@@ -24,3 +24,4 @@ Route::get('delete/{id?}','LoginController@delete')->name('delete');
 Route::get('changeStatus/{id?}','LoginController@changeStatus')->name('change.admin');
 Route::get('deleteAdmin/{id?}','LoginController@deleteAdmin')->name('delete.admin');
 Route::any('filter', 'LoginController@filter')->name('filter');
+Route::get('Excel/dowload', 'LoginController@export')->name('Excel');

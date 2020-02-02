@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Usuarios;
 use App\Publicacao;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PubExport;
 
 class LoginController extends Controller
 {
@@ -133,6 +135,12 @@ public function filter(Request $request){
     
     $publ = DB::table('publicacao')->orderBy('created_at')->where('congregacao','=',$cong)->get();
     return view('historicRequests', compact('publ'));
+}
+
+
+public function export() 
+{
+    return Excel::download(new PubExport, 'Pedidos.xlsx');
 }
 
 
