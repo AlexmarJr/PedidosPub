@@ -45,8 +45,8 @@
               <select class="form-control" required id='selectPub' name='selectPub'> 
                 <option value="" disabled selected hidden>Publicação</option>
                 <option disabled style="color: red">Biblia</option>
-                <option value="Tradução do Novo Mundo da Biblia Sagrada"  @if(isset($head) && ($head->name == 'Tradução do Novo Mundo da Biblia Sagrada')) selected @endif >Tradução do Novo Mundo da Biblia Sagrada</option>
-                <option value="Tradução do Novo Mundo da Biblia Sagrada(Edição Pequena)" @if(isset($head) && ($head->name == 'Tradução do Novo Mundo da Biblia Sagrada(Edição Pequena)')) selected @endif >Tradução do Novo Mundo da Biblia Sagrada>Tradução do Novo Mundo da Biblia Sagrada(Edição Pequena)</option>
+                <option value="Tradução do Novo Mundo da Biblia Sagrada"  @if(isset($head) && ($head->name == 'Tradução do Novo Mundo da Biblia Sagrada')) selected @endif >Tradução do Novo Mundo da Biblia Sagrada(Edição Média)</option>
+                <option value="Tradução do Novo Mundo da Biblia Sagrada(Edição Pequena)" @if(isset($head) && ($head->name == 'Tradução do Novo Mundo da Biblia Sagrada(Edição Pequena)')) selected @endif >Tradução do Novo Mundo da Biblia Sagrada(Edição Pequena)</option>
                 <option disabled style="color: red">Livros</option>
                 <option value="Dê Testemunho Cabal sobre o Reino de Deus"  @if(isset($head) && ($head->name == 'Dê Testemunho Cabal sobre o Reino de Deus')) selected @endif  >Dê Testemunho Cabal sobre o Reino de Deus</option>
                 <option value="Venha ser Meu Seguidor" @if(isset($head) && ($head->name == 'Venha ser Meu Seguidor')) selected @endif >Venha ser Meu Seguidor</option>
@@ -78,6 +78,7 @@
               <input type="number" id="quant" name="quant" @if(isset($head)) value="{{$head->quant}}" @endif class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
               <input type="hidden" value="{{$cong}}" id="congregacao" name="congregacao">
               <input type="hidden" value="{{$userName}}" id="adminStatus" name="adminStatus">
+        
               
           </div>
 

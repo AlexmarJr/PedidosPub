@@ -86,7 +86,7 @@ class LoginController extends Controller
     }
 
     public function searchEnviados(){
-        $publ = DB::table('publicacao')->orderBy('created_at')->get();
+        $publ = DB::table('publicacao')->orderBy('status')->get();
         return view('historicRequests', compact('publ'));
     }
 
