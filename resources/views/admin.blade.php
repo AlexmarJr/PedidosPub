@@ -2,6 +2,9 @@
         <HEAD>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <TITLE>Consulta de Pedidos (Administrador)</TITLE>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
         </HEAD>
@@ -23,15 +26,26 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="{{route('searchEnviados')}}">Historico de Pedidos<span class="sr-only"></span></a>
                         </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Configurações
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Comming Soon</a>
+                            <a class="dropdown-item" href="#">Comming Soon</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{route('user_configurations')}}">Usuários</a>
+                          </div>
+                        </li>
                     </ul>
-                    <div class="active" style="margin-right:15px"> 
-                        <button type="button" class="btn btn-dark float-right" onclick="wipe()">Limpar e Armazenar Todos Pedidos</button>
-                    </div>
+                    
+      </li>
                   
                   <a class="nav-link float-right" href="{{route('logoff')}}" style="background-color:red;color:white;border-radius: 25%">Logoff<span class="sr-only"></span></a>
                   
 
                 </nav>
+                
           </header>
         </div>
               <div class="container float-left" style="background-color: white;margin-top: 20px;margin-left: 25px;border-radius: 2%">
@@ -48,7 +62,8 @@
                       @foreach($publ as $value)
                       <tr>
                         <td scope="row">{{$value->id}}</td>
-                        <td>{{ \Carbon\Carbon::parse($value->created_at)->format('d/m/Y')}}</td>
+                        <!-- <td>{{ \Carbon\Carbon::parse($value->created_at)->format('d/m/Y')}}</td> -->
+                        <td>{{ \Carbon\Carbon::parse($value->created_at)->format('Y')}} / {{ \Carbon\Carbon::parse($value->created_at)->format('F')}}</td>
                         <td>{{$value->congregacao}}</td>
                         <td>{{$value->name}}</td>
                         <td>{{$value->idioma}}</td>

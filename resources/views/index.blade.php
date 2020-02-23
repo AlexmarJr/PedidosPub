@@ -2,6 +2,9 @@
   <HEAD>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <TITLE>Pedidos Publicações</TITLE>
   </HEAD>
   <BODY style="background-color: gray">
@@ -12,7 +15,7 @@
            
           
             <div class="row" >
-              <ul class="navbar-nav mr-auto" style="padding-left: 50px">
+              <ul class="navbar-nav mr-auto" style="padding-left: 40px">
               @if ($userName != 'admin')
               <li class="nav-item active">
                   <p class="nav-link">Realizar Pedido&nbsp;&nbsp;&nbsp;|<span class="sr-only">(página atual)</span></p>
@@ -28,6 +31,17 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{route('searchEnviados')}}">Historico de Pedidos<span class="sr-only"></span></a>
                 </li>
+                <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Configurações
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Comming Soon</a>
+                            <a class="dropdown-item" href="#">Comming Soon</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{route('user_configurations')}}">Usuários</a>
+                          </div>
+                        </li>
                 @endif
               </ul>
             </div>
